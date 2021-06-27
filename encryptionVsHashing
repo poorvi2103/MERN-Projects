@@ -1,0 +1,14 @@
+encryption:Two way ommunication
+so if it is encoded,then it can also be decoded easily
+
+hashing:One way communication
+i.e we can't conc=vert it into original data
+There are many hashing algos.
+MD5----->2 sec to decode
+whirloppol------>3 days to decode
+becrypt(2 rounds)------->159 daya to decode
+becrypt(4 rounds)------->3 years to decode
+
+const bcrypt=require("bcryptjs");
+bcrypt.hash(password,10)
+bcrypt.compare(password,hashespasswoord)

@@ -1,0 +1,19 @@
+JSON Web token is a standard used to create acces tokens for an application.
+
+IT works this way:THe server generates a token that certifies the user idintity,and snd it to the client.
+
+The client will send this token back to server ffor every subsequent request,so the server knows the request comes from a particular identity,
+
+The token is mainly composed of header, payload, signature. These three parts are separated by dots(.). 
+
+const jwt=require("jsonwebtoken")
+
+const createToken=async()=>{
+    const token=await jwt.sign({_id:"849094448590"},"mynameispoorviagarwaljecrcfoundationjaipursitapura",{
+        expiresIn:"2 seconds"}
+    );
+    console.log(token);
+
+    const userVer=await jwt.verify(token,"mynameispoorviagarwaljecrcfoundationjaipursitapura")
+    console.log(userVer)
+}
